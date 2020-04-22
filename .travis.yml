@@ -5,9 +5,9 @@ jdk:
 
 script:
   - git fetch --unshallow
-  - mvn clean pac
+  - mvn clean package
 
-after_success:
-  - docker build -t speech4j/tenant-service .gt
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push speech4j/tenant-service
+#after_success:
+#  - docker build -t speech4j/tenant-service .gt
+#  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+#  - docker push speech4j/tenant-service
