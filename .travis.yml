@@ -4,7 +4,6 @@ jdk:
   - openjdk11
 
 script:
-  - git fetch --unshallow
   - mvn clean package
 
 #after_success:
