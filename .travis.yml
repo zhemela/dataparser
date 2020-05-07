@@ -1,11 +1,11 @@
 dist: trusty
 
 jdk:
-  - openjdk11
+  - openjdk8
 
 script:
   - mvn clean package
 
 after_success:
-  - docker build -t dataparser
+  - docker build -t dataparser .
   - docker push 245523304691.dkr.ecr.us-east-2.amazonaws.com/dataanalyzer
